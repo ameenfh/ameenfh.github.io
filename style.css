@@ -1,0 +1,85 @@
+﻿body
+{
+	background-color: #90b87d;
+	color: white;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Major Mono Display', monospace;
+	line-height: 2;
+	margin-left: 20vw;
+	margin-right: 20vw;
+	font-size: 25px;
+}
+
+#mainTitle {
+	margin-top: 35vh;
+}
+
+#mainTitle2 {
+	font-size: 100px;
+	margin-top: 0px;
+}
+
+
+h2, th {
+	text-align: center;
+	font-family: 'Major Mono Display', monospace;
+	font-size: 30px;
+}
+
+h2{
+	margin-top: 200px;
+}
+
+th {
+	padding-bottom: 5vh;
+}
+
+table{
+	margin-top: 100px;
+}
+
+p, td {
+	font-family: 'Lato', sans-serif;
+	line-height:3;
+	font-size: 20px;
+}
+
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+.analysisText{
+	padding-right: 5vw;
+	padding-left: 5vw;
+}
+
+#dataText, #answerText, #insightText{
+	margin-left: 10vw;
+	margin-right: 10vw;
+}
+
+#insightText{
+	margin-bottom: 200px;
+}
+
+.section1 {
+	opacity: 1;
+	transition: opacity 1s ease-in-out; /* Adjust the duration and easing function as needed */
+}
+
+.section2, #section3, #section4, #answerText, #answerTitle, #intro, #insight, #insightText {
+	opacity: 0;
+	transition: opacity 1s ease-in-out; /* Adjust the duration and easing function as needed */
+}
+
+#intro{
+	margin-top: 300px;
+	margin-left: 10vw;
+	margin-right: 10vw;
+
+}
