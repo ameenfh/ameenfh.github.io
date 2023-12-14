@@ -4,10 +4,6 @@
 	
 }
 
-.imp{
-	color: #b99ae3;
-}
-
 
 h1 {
 	text-align: center;
@@ -89,4 +85,8 @@ img {
 .section2, #section3, #section4, #answerText, #answerTitle, #intro, #insight, #insightText {
 	opacity: 0;
 	transition: opacity 1s ease-in-out; /* Adjust the duration and easing function as needed */
+}
+
+.imp{
+	color: #b99ae3;
 }
