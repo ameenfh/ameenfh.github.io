@@ -153,13 +153,13 @@ svg.selectAll("rect")
   .attr("y", d => y(d.length))
   .attr("width", d => x(d.x1) - x(d.x0) - 1)
   .attr("height", d => height - y(d.length))
-  .style("fill", "#b99ae3")
+  .style("fill", "#7108ff")
   //Histogram interaction
   .on("mouseover", function (event, d) {
     d3.select(this).style("fill", "#e3c39a"); // Change color on hover
   })
   .on("mouseout", function () {
-    d3.select(this).style("fill", "#b99ae3"); // Revert to original color on mouseout
+    d3.select(this).style("fill", "#7108ff"); // Revert to original color on mouseout
   });
 
 // Add x-axis
@@ -249,7 +249,7 @@ svg.selectAll("rect")
   .attr("y", d => y(d.length))
   .attr("width", d => x(d.x1) - x(d.x0) - 1)
   .attr("height", d => height - y(d.length))
-  .style("fill", "#b99ae3")
+  .style("fill", "#7108ff")
   //Histogram interaction
   .on("mouseover", function (event, d) {
     d3.select(this).style("fill", "#e3c39a"); // Change color on hover
@@ -257,7 +257,7 @@ svg.selectAll("rect")
     
   })
   .on("mouseout", function () {
-    d3.select(this).style("fill", "#b99ae3"); // Revert to original color on mouseout
+    d3.select(this).style("fill", "#7108ff"); // Revert to original color on mouseout
   });
 
 
