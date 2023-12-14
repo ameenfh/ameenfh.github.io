@@ -1,7 +1,7 @@
 ﻿body
 {
 	background-color: #90b87d;
-	color: white;
+	
 }
 
 .imp{
@@ -16,6 +16,7 @@ h1 {
 	margin-left: 20vw;
 	margin-right: 20vw;
 	font-size: 25px;
+	color: white;
 }
 
 #mainTitle {
@@ -38,6 +39,7 @@ h2, th {
 	text-align: center;
 	font-family: 'Major Mono Display', monospace;
 	font-size: 30px;
+	color: white;
 }
 
 h2{
@@ -56,6 +58,7 @@ p, td {
 	font-family: 'Lato', sans-serif;
 	line-height:3;
 	font-size: 20px;
+	color: white;
 }
 
 
