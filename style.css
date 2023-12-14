@@ -4,6 +4,9 @@
 	
 }
 
+b, i{
+	color: #b99ae3;
+}
 
 h1 {
 	text-align: center;
@@ -87,6 +90,4 @@ img {
 	transition: opacity 1s ease-in-out; /* Adjust the duration and easing function as needed */
 }
 
-.imp{
-	color: #b99ae3;
-}
+
