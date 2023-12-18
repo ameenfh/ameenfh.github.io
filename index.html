@@ -64,15 +64,18 @@
     
     <table id = "section3">
         <tr>
-            <th colspan = "2"> Fruit and Vegetable Data </th>
+            <th> Fruit and Vegetable Data </th>
+        </tr>
+        <tr>
+        <td class = "histcell">
+            <div id="histogram-container"></div>
+        </td>
         </tr>
         <tr>
         <td class = "analysisText"> 
-            Mr. Plum smelled the refreshing scents of the fruits and vegetables as he went through the price tags. The prices orchestrated into a melody: the prices per pound of the produce clustered around lower prices, usually between $0.50 and $1.5 per pound. The central price was about $1.9 per pound. The prices varied from $0.2 to $4.75 per pound, but Mr. Plum’s eyebrow twitched as he noticed an unusual note in his mental symphony. Some costed greater than $5.5 per pound, and he would avoid purchasing them: <i style = "color: #2f0368;"> asparagus ($6.71/pound), figs ($6.84/pound), fresh raspberries ($6.64/pound), and mangoes ($10.56/pound). </i> Others were very cheap, and he would definitely buy them: <i style = "color: #2f0368;"> bananas ($0.53/pound), watermelon ($0.37/pound), carrots ($0.88/pound), and cabbage ($0.71/pound). </i>
+            Mr. Plum smelled the refreshing scents of the fruits and vegetables as he went through the price tags. The prices orchestrated into a melody: the prices per pound of the produce clustered around lower prices, usually between $0.50 and $1.5 per pound. The central price was about $1.9 per pound. The prices varied from $0.2 to $4.75 per pound, but Mr. Plum’s eyebrow twitched as he noticed an unusual note in the melody. Some costed greater than $5.5 per pound, and he would avoid purchasing them: <i style = "color: #2f0368;"> asparagus ($6.71/pound), figs ($6.84/pound), fresh raspberries ($6.64/pound), and mangoes ($10.56/pound). </i> Others were very cheap, and he would definitely buy them: <i style = "color: #2f0368;"> bananas ($0.53/pound), watermelon ($0.37/pound), carrots ($0.88/pound), and cabbage ($0.71/pound). </i>
         </td>
-        <td>
-            <div id="histogram-container"></div>
-        </td>
+        
         </tr>
     </table>
     
@@ -81,11 +84,13 @@
             <th colspan = "2"> Snack Data </th>
         </tr>
         <tr>
-          <td> <div id="histogram-container2"></div> </td>
+          <td class = "histcell"> <div id="histogram-container2"></div> </td>
+        </tr>
+        <tr>
            <td class = "analysisText">
                 Mr. Plum entered the snack aisle and continued his mission. Sure, produce was better for his health, but it wouldn't hurt to add some flavor to his life with tasty snacks. Like Sherlock Holmes, he deciphered the price tags and found a pattern: the prices were symmetrical and clustered around the prices between $3.5 to $4.5. The middle price for snacks was $3.75 per pound, and the prices varied from $2 to $5.75 per pound. However, again, there were some great and terrible prices. He knew that he would avoid buying <i style = "color: #2f0368;"> fruit rolls ($7.56/pound), granola bars ($5.79/pound), chocolate ($5.56/pound), and potato chips ($5.10/pound). </i> On the other hand, he was considering purchasing <i style = "color: #2f0368;"> ice cream ($2.13/pound), pudding ($1.98/pound), and toaster pastries ($2.68/pound). </i>
            </td>
-        <tr>
+        </tr>
     </table>
 
     
@@ -105,7 +110,7 @@
         Central Insight
     </h2>
     <p id = "insightText">
-        The data consistently shows that the cost per pound of produce is generally lower than that of snack foods. In a world of financial constraints, these findings empower consumers to make more economical choices, minimizing wasteful spending. Ultimately, the key takeaway is that individuals on limited budgets wanting to maximize food quantity should prioritize purchasing fruits and vegetables over junk food. This means buying more bananas, watermelons, carrots, and green cabbage and also avoiding the purchase of chocolate, potato chips, fruit rolls, and granola bars. However, buying only produce is easier said than done. If you need to buy snacks, getting the most for your money means buying ice cream, pudding, and toaster pastries. <br> <br> Mr. Plum left with a bag containing 9 pounds of bananas. <i style = "color: #2f0368;"> I am going to be really full after lunch, </i> he thought.
+        The data consistently shows that the cost per pound of produce is generally lower than that of snack foods. In a world of financial constraints, these findings empower consumers to make more economical choices, minimizing wasteful spending. Ultimately, the key takeaway is that individuals on limited budgets wanting to maximize food quantity should purchase fruits and vegetables over junk food. This means buying more bananas, watermelons, carrots, and green cabbage and avoiding chocolate, potato chips, fruit rolls, and granola bars. However, buying only produce is easier said than done. If you need to buy snacks, getting the most for your money means buying ice cream, pudding, and toaster pastries. <br> <br> Mr. Plum left with a bag containing 9 pounds of bananas. <i style = "color: #2f0368;"> I am going to be really full after lunch, </i> he thought.
     
 
     </p>
@@ -117,8 +122,8 @@ var sdata = [5.555573, 3.606123, 4.571, 3.776, 3.586, 3.861, 3.696, 7.556, 3.420
 
 //Fruit and Vegetable Histogram
 // Set up the SVG container
-var svgWidth = 500;
-var svgHeight = 500;
+var svgWidth = window.innerWidth - 150;
+var svgHeight = 250;
 var margin = { top: 20, right: 30, bottom: 40, left: 40 };
 
 var width = svgWidth - margin.left - margin.right;
@@ -213,8 +218,8 @@ svg.append("g")
 
   //snack histogram
   // Set up the SVG container
-var svgWidth = 500;
-var svgHeight = 500;
+var svgWidth = window.innerWidth - 150;
+var svgHeight = 250;
 var margin = { top: 20, right: 30, bottom: 40, left: 40 };
 
 var width = svgWidth - margin.left - margin.right;
@@ -386,7 +391,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         
-        else if (window.scrollY >= 1600 && window.scrollY < 2000) {
+        else if (window.scrollY >= 1600 && window.scrollY < 2400) {
             var opacity = window.scrollY / 1600; // Adjust the threshold as needed
 
         // Ensure the opacity stays within the range [0, 1]
@@ -395,8 +400,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Set the opacity of the text element
         section3.style.opacity = opacity.toFixed(2);
         }
-        else if (window.scrollY >= 2000 && window.scrollY < 2400) {
-        var opacity = 1- window.scrollY / 2000; // Adjust the threshold as needed
+        else if (window.scrollY >= 2400 && window.scrollY < 2700) {
+        var opacity = 1- window.scrollY / 2400; // Adjust the threshold as needed
 
         // Ensure the opacity stays within the range [0, 1]
         opacity = Math.max(0, Math.min(1, opacity));
@@ -407,8 +412,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         
-        else if (window.scrollY >= 2400 && window.scrollY < 2800) {
-            var opacity = window.scrollY / 2400; // Adjust the threshold as needed
+        else if (window.scrollY >= 2700 && window.scrollY < 3500) {
+            var opacity = window.scrollY / 2700; // Adjust the threshold as needed
 
         // Ensure the opacity stays within the range [0, 1]
         opacity = Math.max(0, Math.min(1, opacity));
@@ -416,8 +421,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Set the opacity of the text element
         section4.style.opacity = opacity.toFixed(2);
         }
-        else if (window.scrollY >= 2800 && window.scrollY < 3100) {
-        var opacity = 1- window.scrollY / 2800; // Adjust the threshold as needed
+        else if (window.scrollY >= 3500 && window.scrollY < 3800) {
+        var opacity = 1- window.scrollY / 3500; // Adjust the threshold as needed
 
         // Ensure the opacity stays within the range [0, 1]
         opacity = Math.max(0, Math.min(1, opacity));
@@ -429,8 +434,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        else if (window.scrollY >= 3100 && window.scrollY < 3400) {
-            var opacity = window.scrollY / 3100; // Adjust the threshold as needed
+        else if (window.scrollY >= 3800 && window.scrollY < 4100) {
+            var opacity = window.scrollY / 3800; // Adjust the threshold as needed
 
         // Ensure the opacity stays within the range [0, 1]
         opacity = Math.max(0, Math.min(1, opacity));
@@ -439,8 +444,8 @@ document.addEventListener("DOMContentLoaded", function () {
         section5a.style.opacity = opacity.toFixed(2);
         section5b.style.opacity = opacity.toFixed(2);
         }
-        else if (window.scrollY >= 3400 && window.scrollY < 3700) {
-            var opacity = 1 - window.scrollY / 3400; // Adjust the threshold as needed
+        else if (window.scrollY >= 4100 && window.scrollY < 4400) {
+            var opacity = 1 - window.scrollY / 4100; // Adjust the threshold as needed
 
         // Ensure the opacity stays within the range [0, 1]
         opacity = Math.max(0, Math.min(1, opacity));
@@ -452,8 +457,8 @@ document.addEventListener("DOMContentLoaded", function () {
         section6b.style.opacity = opacity.toFixed(2);
         }
 
-        else if (window.scrollY >= 3700) {
-            var opacity = window.scrollY / 3700; // Adjust the threshold as needed
+        else if (window.scrollY >= 4400) {
+            var opacity = window.scrollY / 4400; // Adjust the threshold as needed
 
         // Ensure the opacity stays within the range [0, 1]
         opacity = Math.max(0, Math.min(1, opacity));
